@@ -35,7 +35,7 @@ variable "private_db_subnets" {
   }))
 }
 
-variable "private_dns" {
+variable "dns" {
   type = string
 }
 

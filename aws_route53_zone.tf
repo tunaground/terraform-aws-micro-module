@@ -1,9 +1,5 @@
-resource "aws_route53_zone" "private" {
-  name = var.private_dns
+resource "aws_route53_zone" "main" {
+  name = var.dns
 
-  vpc {
-    vpc_id = aws_vpc.main.id
-  }
-
-  tags = { Name = "${title(var.project)}Private" }
+  tags = { Name = "${title(var.project)}" }
 }
